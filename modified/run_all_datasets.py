@@ -25,7 +25,7 @@ from KNN.ItemKNNCBFRecommender import ItemKNNCBFRecommender
 
 def run_on_dataset_ICM_name(ICM_name, dataset_class, similarity_type_list, output_folder, allow_bias_ICM,
                             # TODO ADDED
-                            feature_weighting
+                            feature_weighting # could be True,False (allow tuning weighting) OR 'none','TF-IDF','BM25' (specify fixed weighting)
                             # TODO /ADDED
                             ):
 
@@ -177,8 +177,8 @@ if __name__ == '__main__':
         # AmazonMoviesTVReader, # Not done
         #
         # SpotifyChallenge2018Reader, # NO ICM available
-        # XingChallenge2016Reader, # Not done - Too many items
-        # XingChallenge2017Reader, # Not done - Too many items
+        # XingChallenge2016Reader, # Not done (Too many items)
+        # XingChallenge2017Reader, # Not done (Too many items)
         #
         # TVAudienceReader, # NO ICM available
         # LastFMHetrec2011Reader, # Done

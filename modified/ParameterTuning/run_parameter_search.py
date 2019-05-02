@@ -279,6 +279,7 @@ def run_KNNRecommender_on_similarity_type(similarity_type, parameterSearch,
 
     if not is_set_similarity:
 
+        # Added possibility not only to pass allow_weighting as True/False, but also as string --> force 1 type of weighting
         # TODO REMOVED
         # hyperparamethers_range_dictionary["feature_weighting"] = Categorical(["none", "BM25", "TF-IDF"])
         # TODO /REMOVED
