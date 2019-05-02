@@ -159,32 +159,32 @@ if __name__ == '__main__':
     dataset_class_list = [
         # Movielens100KReader, # NO ICM available
         # Movielens1MReader, # Done
-        # Movielens10MReader, # WIP 3
-        # Movielens20MReader, # WIP 3
-        # TheMoviesDatasetReader, # WIP 2
+        # Movielens10MReader, # Done
+        # Movielens20MReader, # Done
+        # TheMoviesDatasetReader, # Done
         #
         # BrightkiteReader, # NO ICM available
         # EpinionsReader, # NO ICM available
-        NetflixPrizeReader, # NO ICM available ???
-        # ThirtyMusicReader, # WIP 2 ?????????????
+        # NetflixPrizeReader, # NO ICM available
+        # ThirtyMusicReader, # NO ICM available
         # YelpReader, # NO ICM available
-        # BookCrossingReader, # WIP 5
-        # NetflixEnhancedReader, # WIP 5
+        # BookCrossingReader, # Done
+        # NetflixEnhancedReader, # NO ICM available
         #
-        # AmazonElectronicsReader,
-        # AmazonBooksReader,
-        # AmazonAutomotiveReader,
-        # AmazonMoviesTVReader,
+        # AmazonElectronicsReader, # Not done
+        # AmazonBooksReader, # Not done
+        # AmazonAutomotiveReader, # Not done
+        # AmazonMoviesTVReader, # Not done
         #
-        # SpotifyChallenge2018Reader, # WIP 5 - NO ICM available ???
-        # XingChallenge2016Reader, # WIP 5 - too many items
-        # XingChallenge2017Reader, # WIP 5 - too many items
+        # SpotifyChallenge2018Reader, # NO ICM available
+        # XingChallenge2016Reader, # Not done - Too many items
+        # XingChallenge2017Reader, # Not done - Too many items
         #
         # TVAudienceReader, # NO ICM available
-        # LastFMHetrec2011Reader, # Done 4
+        # LastFMHetrec2011Reader, # Done
         # # DeliciousHetrec2011Reader,
-        # CiteULike_aReader, # Done 4
-        # CiteULike_tReader, # Done 4
+        # CiteULike_aReader, # Done
+        # CiteULike_tReader, # Done
         ]
 
     feature_weighting_list = [
