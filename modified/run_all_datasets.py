@@ -8,12 +8,10 @@ Created on 20/03/19
 
 import multiprocessing, traceback, os
 from functools import  partial
-# TODO ADDED
-import skopt
-import datetime
-# TODO /ADDED
 
-os.chdir('..')
+# TODO added
+os.chdir('..') # move cwd up 1 level (to project root, where non-modified version of this file is)
+# TODO /added
 
 from Data_manager.DataReader_ImportAll import *
 from modified.ParameterTuning.run_parameter_search import runParameterSearch_Content, runParameterSearch_Collaborative
@@ -25,7 +23,7 @@ from KNN.ItemKNNCBFRecommender import ItemKNNCBFRecommender
 
 def run_on_dataset_ICM_name(ICM_name, dataset_class, similarity_type_list, output_folder, allow_bias_ICM,
                             # TODO ADDED
-                            feature_weighting # could be True,False (allow tuning weighting) OR 'none','TF-IDF','BM25' (specify fixed weighting)
+                            feature_weighting # could be boolean (allow tuning weighting) OR string 'none','TF-IDF','BM25' (specify fixed weighting)
                             # TODO /ADDED
                             ):
 
@@ -93,7 +91,9 @@ def run_on_dataset(dataset_class, allow_bias_ICM,
     else:
         output_folder += "ICM_original/"
 
+    # TODO added
     output_folder += "feature_weighting_"+feature_weighting+"/"
+    # TODO /added
 
     # If directory does not exist, create
     if not os.path.exists(output_folder):
@@ -187,6 +187,7 @@ if __name__ == '__main__':
         # CiteULike_tReader, # Done
         ]
 
+    # TODO added
     feature_weighting_list = [
         "none",
         "TF-IDF",
@@ -197,10 +198,17 @@ if __name__ == '__main__':
         False,
         True
     ]
+    # TODO /added
 
+    # TODO removed
+    # for dataset_class in dataset_class_list:
+    #     run_on_dataset(dataset_class, allow_bias_ICM = False)
+    #     run_on_dataset(dataset_class, allow_bias_ICM = True)
+    # TODO /removed
+    # TODO added
     for dataset_class in dataset_class_list:
         for feature_weighting in feature_weighting_list:
             for allow_bias_ICM in allow_bias_ICM_list:
                 run_on_dataset(dataset_class, allow_bias_ICM = allow_bias_ICM, feature_weighting=feature_weighting)
                 # Obs: if one dataset has more ICM, all ICMs are used by run_on_dataset() before passing to next cycle heres
-
+    # TODO /added
