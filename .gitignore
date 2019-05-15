@@ -110,3 +110,15 @@ ENV/
 
 # mypy
 .mypy_cache/
+
+# MacOS
+**/.DS_Store
+
+# Project
+result_experiments/*
+Figures/*
+!Figures/.gitkeep
+Base/Similarity/Cython/*.so
+log_console_output
+
+
